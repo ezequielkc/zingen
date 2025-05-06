@@ -26,14 +26,25 @@
   display: none;
 }
 
-/* Layout padrão em grid para empilhamento vertical no mobile */
+/* Layout padrão em grid vertical no mobile */
 .even-columns {
   display: grid;
   gap: 1rem;
 }
 
-/*  A regra de layout horizontal (.even-columns com columns) para dentro da media query.
-   - A regra de .desktop-only para dentro da media query para evitar sobrescrever display no mobile. */
+.flex {
+display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+
 @media (width >= 80em) {
   .container {
     --max-width: 80rem;
