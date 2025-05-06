@@ -1,0 +1,50 @@
+.py-base {
+  padding-block: var(--py-base);
+}
+
+.py-lg {
+  padding-block: var(--py-lg);
+}
+
+.py-xl {
+  padding-block: var(--py-xl);
+}
+
+.px-lg {
+  padding-inline: var(--px-lg);
+}
+
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  margin-inline: auto;
+  border: solid violet;
+}
+
+/* Mantido: esconde elementos em dispositivos pequenos */
+.desktop-only {
+  display: none;
+}
+
+/* Layout padrão em grid para empilhamento vertical no mobile */
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+/*  A regra de layout horizontal (.even-columns com columns) para dentro da media query.
+   - A regra de .desktop-only para dentro da media query para evitar sobrescrever display no mobile. */
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
