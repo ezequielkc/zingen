@@ -21,19 +21,17 @@
   /* border: solid violet; */
 }
 
-/* Mantido: esconde elementos em dispositivos pequenos */
 .desktop-only {
   display: none;
 }
 
-/* Layout padrão em grid vertical no mobile */
 .even-columns {
   display: grid;
   gap: 1rem;
 }
 
 .flex {
-display: flex;
+  display: flex;
 }
 
 .items-center {
@@ -51,7 +49,6 @@ display: flex;
 .grid {
   display: grid;
 }
-
 
 @media (width >= 80em) {
   .container {
